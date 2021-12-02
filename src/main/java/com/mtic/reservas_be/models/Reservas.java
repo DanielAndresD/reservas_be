@@ -2,6 +2,7 @@ package com.mtic.reservas_be.models;
 
 import org.springframework.data.annotation.Id;
 import java.util.Date;
+import java.util.List;
 
 public class Reservas {
     @Id
@@ -14,9 +15,10 @@ public class Reservas {
     private Integer idHotel;
     private String Habitacion;
     private String Estado;
-    private Integer medioPago;
+    private String medioPago;
+    private List<DatosPersonales> Datospersonales;
 
-    public Reservas(Integer idReserva, Integer idnombrecuentaUsuario, Date fechaReserva, Date fechaInicio, Date fechaFin, Integer Personas, Integer idHotel, String habitacion, String estado, Integer medioPago) {
+    public Reservas(Integer idReserva, Integer idnombrecuentaUsuario, Date fechaReserva, Date fechaInicio, Date fechaFin, Integer Personas, Integer idHotel, String habitacion, String estado, String medioPago,List<DatosPersonales> datosPersonales) {
         IdReserva = idReserva;
         IdnombrecuentaUsuario = idnombrecuentaUsuario;
         FechaReserva = fechaReserva;
@@ -27,6 +29,15 @@ public class Reservas {
         Habitacion = habitacion;
         Estado = estado;
         this.medioPago = medioPago;
+        this.Datospersonales= datosPersonales;
+    }
+
+    public List<DatosPersonales> getDatospersonales() {
+        return Datospersonales;
+    }
+
+    public void setDatospersonales(List<DatosPersonales> datospersonales) {
+        Datospersonales = datospersonales;
     }
 
     public Integer getIdReserva() {
@@ -101,11 +112,11 @@ public class Reservas {
         Estado = estado;
     }
 
-    public Integer getMedioPago() {
+    public String getMedioPago() {
         return medioPago;
     }
 
-    public void setMedioPago(Integer medioPago) {
+    public void setMedioPago(String medioPago) {
         this.medioPago = medioPago;
     }
 }
