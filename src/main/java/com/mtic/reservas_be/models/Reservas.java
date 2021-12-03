@@ -5,80 +5,81 @@ import java.util.Date;
 
 public class Reservas {
     @Id
-    private Integer IdReserva;
-    private Integer IdnombrecuentaUsuario;
-    private Date FechaReserva;
-    private Date FechaInicio;
-    private Date FechaFin;
-    private Integer Personas;
+    private Integer idReserva;
+    private Integer nombrecuentaUsuario;
+    private Date fechaReserva;
+    private Date fechaInicio;
+    private Date fechaFin;
+    private Integer personas;
     private Integer idHotel;
-    private String Habitacion;
-    private String Estado;
-    private Integer medioPago;
+    private String habitacion;
+    private String estado;
+    private String medioPago;
 
-    public Reservas(Integer idReserva, Integer idnombrecuentaUsuario, Date fechaReserva, Date fechaInicio, Date fechaFin, Integer Personas, Integer idHotel, String habitacion, String estado, Integer medioPago) {
-        IdReserva = idReserva;
-        IdnombrecuentaUsuario = idnombrecuentaUsuario;
-        FechaReserva = fechaReserva;
-        FechaInicio = fechaInicio;
-        FechaFin = fechaFin;
-        this.Personas = Personas;
+    public Reservas(Integer idReserva, Integer nombrecuentaUsuario, Date fechaReserva, Date fechaInicio, Date fechaFin, Integer personas, Integer idHotel, String habitacion, String estado, String medioPago) {
+        this.idReserva = idReserva;
+        this.nombrecuentaUsuario = nombrecuentaUsuario;
+        this.fechaReserva = fechaReserva;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.personas = personas;
         this.idHotel = idHotel;
-        Habitacion = habitacion;
-        Estado = estado;
+        this.habitacion = habitacion;
+        this.estado = estado;
         this.medioPago = medioPago;
+        System.out.println("****************************************************************************");
     }
 
     public Integer getIdReserva() {
-        return IdReserva;
+        return this.idReserva;
     }
 
     public void setIdReserva(Integer idReserva) {
-        IdReserva = idReserva;
+        this.idReserva = idReserva;
     }
 
-    public Integer getIdnombrecuentaUsuario() {
-        return IdnombrecuentaUsuario;
+    public Integer getNombrecuentaUsuario() {
+        return this.nombrecuentaUsuario;
     }
 
-    public void setIdnombrecuentaUsuario(Integer idnombrecuentaUsuario) {
-        IdnombrecuentaUsuario = idnombrecuentaUsuario;
+    public void setNombrecuentaUsuario(Integer nombrecuentaUsuario) {
+        this.nombrecuentaUsuario = nombrecuentaUsuario;
     }
 
     public Date getFechaReserva() {
-        return FechaReserva;
+        return this.fechaReserva;
     }
 
     public void setFechaReserva(Date fechaReserva) {
-        FechaReserva = fechaReserva;
+        this.fechaReserva = fechaReserva;
     }
 
     public Date getFechaInicio() {
-        return FechaInicio;
+        return this.fechaInicio;
     }
 
     public void setFechaInicio(Date fechaInicio) {
-        FechaInicio = fechaInicio;
+        this.fechaInicio = fechaInicio;
     }
 
     public Date getFechaFin() {
-        return FechaFin;
+        return this.fechaFin;
     }
 
     public void setFechaFin(Date fechaFin) {
-        FechaFin = fechaFin;
+        this.fechaFin = fechaFin;
     }
 
     public Integer getPersonas() {
-        return Personas;
+        return personas;
     }
 
     public void setPersonas(Integer personas) {
-        Personas = personas;
+        this.personas = personas;
     }
 
     public Integer getIdHotel() {
-        return idHotel;
+        return this.idHotel;
     }
 
     public void setIdHotel(Integer idHotel) {
@@ -86,26 +87,26 @@ public class Reservas {
     }
 
     public String getHabitacion() {
-        return Habitacion;
+        return this.habitacion;
     }
 
     public void setHabitacion(String habitacion) {
-        Habitacion = habitacion;
+        this.habitacion = habitacion;
     }
 
     public String getEstado() {
-        return Estado;
+        return this.estado;
     }
 
     public void setEstado(String estado) {
-        Estado = estado;
+        this.estado = estado;
     }
 
-    public Integer getMedioPago() {
-        return medioPago;
+    public String getMedioPago() {
+        return this.medioPago;
     }
 
-    public void setMedioPago(Integer medioPago) {
+    public void setMedioPago(String medioPago) {
         this.medioPago = medioPago;
     }
 }

@@ -16,10 +16,11 @@ public class ReservasController {
         this.reservasRepository = reservasRepository;
     }
 
-    @GetMapping("/reservas/{IdReserva}")
-    Reservas getReservas(@PathVariable String IdReserva){
-        return reservasRepository.findById(IdReserva)
-                .orElseThrow(() -> new ReservasNotFoundException("No se encontro la reserva con el Id: " + IdReserva));
+    @GetMapping("/reservas/{idReserva}")
+    Reservas getReservas(@PathVariable Integer idReserva){
+        System.out.println(idReserva);
+        return reservasRepository.findById(idReserva)
+                .orElseThrow(() -> new ReservasNotFoundException("No se encontro la reserva con el Id: " + idReserva));
     }
     @PostMapping("/reservas")
     Reservas newReservas(@RequestBody Reservas reserva) {
